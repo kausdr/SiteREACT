@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react'
+import SeuNome from './components/pastinhaex/SeuNome';
+import Saudacao from './components/pastinhaex/Saudacao';
 
 function App() {
+
+  const [nome, setNome] = useState()
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1>State Lift</h1>
+    <SeuNome setNome={setNome}/>
+    <Saudacao nome={nome}/>
     </div>
   );
 }
